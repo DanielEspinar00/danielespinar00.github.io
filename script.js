@@ -10,7 +10,7 @@ const copyright = `Copyright &#169; 2024 ${fullname}. All Rights Reserved.`;
 // Functions
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
+  const icon = document.querySelector(".phone-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
