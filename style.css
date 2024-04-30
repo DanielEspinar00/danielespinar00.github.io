@@ -265,6 +265,8 @@ section {
 
 #about {
   position: relative;
+  height: fit-content;
+  margin-bottom: 5rem;
 }
 
 .about-containers {
@@ -318,6 +320,8 @@ section {
 
 #experience {
   position: relative;
+  height: fit-content;
+  margin-bottom: 5rem;
 }
 
 .experience-sub-title {
@@ -331,6 +335,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: fit-content;
 }
 
 .article-container {
@@ -357,6 +362,8 @@ article .icon {
 
 #projects {
   position: relative;
+  height: fit-content;
+  margin-bottom: 5rem;
 }
 
 .color-container {
@@ -380,13 +387,33 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye los elementos uniformemente en cada fila */
+  height: fit-content; /* Establece la altura mínima para ajustarse al contenido */
+}
+
+.project-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  flex-basis: calc(20% - 2rem); /* Establece el tamaño base de los elementos */
+  margin-bottom: 2rem;
+}
+
 /* CONTACT */
 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: fit-content;
+  margin-bottom: 5rem;
 }
 
 .contact-info-upper-container {
