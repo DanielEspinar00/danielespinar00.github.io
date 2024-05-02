@@ -29,22 +29,22 @@ const experienceList = [
 
 const projects = [
     {
-    title: "Proyecto 1",
-    image: "./assets/project-1.png",
-    githubBtn: "https://github.com/DanielEspinar00",
-    demoBtn: "https://www.linkedin.com/in/daniel-espinar-jim%C3%A9nez-983562228/"
+    title: "Undergraduate Thesis (TFG)",
+    image: "./assets/TFG.jpg",
+    githubBtn: "https://github.com/DanielEspinar00/TFG_DigitalTwin",
+    demoBtn: "https://drive.google.com/drive/folders/12Dqh0Jg6YFEvVmqq1mSMuo2Gl967dH-P?usp=sharing"
     },
     {
-    title: "Proyecto 2",
-    image: "./assets/project-2.png",
-    githubBtn: "https://github.com/DanielEspinar00",
-    demoBtn: "https://www.linkedin.com/in/daniel-espinar-jim%C3%A9nez-983562228/"
+    title: "Master's Thesis (TFM)",
+    image: "./assets/TFM.jpg",
+    githubBtn: null /*"https://github.com/DanielEspinar00/TFM_DigitalTwin_RVA"*/,
+    demoBtn: "https://drive.google.com/file/d/1ipoC8131qcDGaT29GUZmBBgEjKJCGzHr/view?usp=sharing"
     },
     {
-    title: "Proyecto 3",
-    image: "./assets/project-3.png",
-    githubBtn: "https://github.com/DanielEspinar00",
-    demoBtn: "https://www.linkedin.com/in/daniel-espinar-jim%C3%A9nez-983562228/"
+    title: "Current Work Project",
+    image: "./assets/NodoIOT.jpg",
+    githubBtn: null,
+    demoBtn: null
     },
     // Agrega más proyectos si es necesario
 ];
@@ -120,7 +120,13 @@ projects.forEach(project => {
     // Crear el contenedor principal del proyecto
     const projectContainer = document.createElement('div');
     projectContainer.classList.add('project-container', 'color-container');
-  
+    
+    // Crear el título del proyecto
+    const titleElement = document.createElement('h2');
+    titleElement.textContent = project.title;
+    titleElement.classList.add('experience-sub-title', 'project-title');
+    projectContainer.appendChild(titleElement);
+
     // Crear el contenedor de la imagen
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('article-container');
@@ -130,13 +136,7 @@ projects.forEach(project => {
     image.classList.add('project-img');
     imageContainer.appendChild(image);
     projectContainer.appendChild(imageContainer);
-  
-    // Crear el título del proyecto
-    const titleElement = document.createElement('h2');
-    titleElement.textContent = project.title;
-    titleElement.classList.add('experience-sub-title', 'project-title');
-    projectContainer.appendChild(titleElement);
-  
+    
     // Crear el contenedor de los botones
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('btn-container');
