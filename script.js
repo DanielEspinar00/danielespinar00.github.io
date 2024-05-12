@@ -11,7 +11,7 @@ const fullname = "Daniel Espinar Jiménez";
 const charge = "System Developer";
 const email = "danielespinar00@gmail.com";
 const about_text = "I'm a computer engineer with a strong ability to learn new tools or skills quickly, as well as analyze problems and propose solutions. I have no problem working in teams with multiple people in the same project, contributing with my opinion when needed, or working in a project by myself.";
-const linkedinUrl = "https://www.linkedin.com/in/daniel-espinar-jim%C3%A9nez-983562228/";
+const linkedinUrl = "https://www.linkedin.com/in/daniel-espinar-jimenez/";
 const githubUrl = "https://github.com/DanielEspinar00";
 const copyright = `Copyright &#169; 2024 ${fullname}. All Rights Reserved.`;
 
