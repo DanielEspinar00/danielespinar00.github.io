@@ -10,7 +10,7 @@
     <title>Ruta 151</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="./images/logo-tienda.png" type="image/png" />
+    <link rel="icon" href="./images/logo-tienda.PNG" type="image/PNG" />
 
     <script>
         async function getFileVersion(filePath) {
@@ -39,19 +39,25 @@
             document.body.appendChild(script);
         }
 
-        async function loadImage() {
-            const imgVersion = await getFileVersion('./images/logo-tienda.png');
-            document.querySelector('.header img').src = `./images/logo-tienda.png?v=${imgVersion}`;
+        async function loadImages() {
+            const images = document.querySelectorAll('img');
+            for (let img of images) {
+                const imgSrc = img.getAttribute('src');
+                if (imgSrc && imgSrc.startsWith('images/')) {
+                    const imgVersion = await getFileVersion(imgSrc);
+                    img.src = `${imgSrc}?v=${imgVersion}`;
+                }
+            }
         }
 
         loadFiles();
-        loadImage();
+        loadImages();
     </script>
 </head>
 <body>
     
     <div class="header">
-        <img src="./images/logo-tienda.png" alt="Ruta 151 Logo">
+        <img src="./images/logo-tienda.PNG" alt="Ruta 151 Logo">
     </div>
 
     <div id="icon-list1" class="icon-list"></div>
