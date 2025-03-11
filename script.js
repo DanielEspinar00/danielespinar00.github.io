@@ -5,7 +5,7 @@ const productsList = [
     { name: "Journey Together 3-Pack Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Inglés", price: "19.95 €", image: "./images/Blister.png", status: "DISPONIBLE"},
     { name: "Rivales Destinados ETB", description: "<br>🔵 Coleccionistas <br>🔴 Jugadores <br>🟡 Cazadores de cartas caras.", languaje: "Español", price: "69.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
     { name: "Rivales Destinados Booster Box", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "215.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
-    { name: "Rivales Destinados Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "19.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
+    { name: "Rivales Destinados Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "19.95 €", image: "./images/Sin imagen español.jpg", status: "AGOTADO"},
 ];
 // Salto de línea --> <br>
 const icons = [
@@ -77,7 +77,7 @@ sortedProducts.forEach(product => {
     <span class="product-status ${product.status.toLowerCase()}">${product.status}</span>
     <h2>${product.name}</h2>
     <p><soft>Idioma:</soft> ${product.languaje}</p>
-    <div class="product-description"><p><soft>Ideal para: </soft>${product.description}</p></div>
+    <div><p><soft>Ideal para: </soft>${product.description}</p></div>
 `;
 
 
