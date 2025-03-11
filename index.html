@@ -12,6 +12,47 @@
     <!-- Favicon -->
     <link rel="icon" href="./images/logo-tienda.PNG" type="image/PNG" />
 
+    <script>
+        async function getFileVersion(filePath) {
+            try {
+                const response = await fetch(filePath, { method: 'HEAD' });
+                const lastModified = response.headers.get('Last-Modified');
+                return lastModified ? new Date(lastModified).getTime() : new Date().getTime();
+            } catch (error) {
+                console.error(`Error obteniendo la versión de ${filePath}:`, error);
+                return new Date().getTime();
+            }
+        }
+
+        async function loadFiles() {
+            const styleVersion = await getFileVersion('./style.css');
+            const scriptVersion = await getFileVersion('./script.js');
+
+            // Insertar archivos en el head con el parámetro de versión
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = `./style.css?v=${styleVersion}`;
+            document.head.appendChild(link);
+
+            const script = document.createElement('script');
+            script.src = `./script.js?v=${scriptVersion}`;
+            document.body.appendChild(script);
+        }
+
+        async function loadImages() {
+            const images = document.querySelectorAll('img');
+            for (let img of images) {
+                const imgSrc = img.getAttribute('src');
+                if (imgSrc && imgSrc.startsWith('images/')) {
+                    const imgVersion = await getFileVersion(imgSrc);
+                    img.src = `${imgSrc}?v=${imgVersion}`;
+                }
+            }
+        }
+
+        loadFiles();
+        loadImages();
+    </script>
 </head>
 <body>
     
@@ -30,48 +71,6 @@
         <div id="icon-list2" class="icon-list"></div>
     </div>
 
-    <script>
-        async function getFileVersion(filePath) {
-            try {
-                const response = await fetch(filePath, { method: 'HEAD' });
-                const lastModified = response.headers.get('Last-Modified');
-                return lastModified ? new Date(lastModified).getTime() : new Date().getTime();
-            } catch (error) {
-                console.error(`Error obteniendo la versión de ${filePath}:`, error);
-                return new Date().getTime();
-            }
-        }
-
-        async function loadFiles() {
-            const styleVersion = await getFileVersion('./style.css');
-            const scriptVersion = await getFileVersion('./script.js');
-
-            // Cargar CSS
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = `./style.css?v=${styleVersion}`;
-            document.head.appendChild(link);
-
-            // Cargar JS con defer para asegurarse de que se ejecuta después de parsear el DOM
-            const script = document.createElement('script');
-            script.src = `./script.js?v=${scriptVersion}`;
-            script.defer = true; // 👈 Esto hace que espere a que el DOM esté listo
-            document.body.appendChild(script);
-        }
-
-        async function loadImages() {
-            const images = document.querySelectorAll('img');
-            for (let img of images) {
-                const imgSrc = img.getAttribute('src');
-                if (imgSrc && imgSrc.startsWith('images/')) {
-                    const imgVersion = await getFileVersion(imgSrc);
-                    img.src = `${imgSrc}?v=${imgVersion}`;
-                }
-            }
-        }
-
-        loadImages();
-        loadFiles();
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
