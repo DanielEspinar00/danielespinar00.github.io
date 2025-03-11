@@ -1,11 +1,11 @@
 const productsList = [ 
     { name: "Journey Together ETB Inglés", description: "<br>🔵Coleccionistas <br>🔴Jugadores  <br>🟡Cazadores de cartas caras", languaje: "Inglés", price: "69.95 €", image: "./images/Journey.jpg", status: "AGOTADO"},
-    { name: "Journey Together Booster Box de 36 sobres", description: "<br>🟡Cazadores de cartas caras <br>🔵Coleccionistas.", languaje: "Inglés", price: "215.95 €", image: "./images/Journeybb.png", status: "AGOTADO"},
+    { name: "Journey Together Booster Box de 36 sobres", description: "<br>🟡Cazadores de cartas caras <br>🔵Coleccionistas.", languaje: "Inglés", price: "215.95 €", image: "./images/Journeybb.png", status: "DISPONIBLE"},
     { name: "Evoluciones Prismáticas Colección Super Premium", description: "<br>🔵 Coleccionistas", languaje: "Español", price: "139.95 €", image: "./images/Ultrapremium.jpg", status: "AGOTADO"},
     { name: "Journey Together 3-Pack Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Inglés", price: "19.95 €", image: "./images/Blister.png", status: "DISPONIBLE"},
     { name: "Rivales Destinados ETB", description: "<br>🔵 Coleccionistas <br>🔴 Jugadores <br>🟡 Cazadores de cartas caras.", languaje: "Español", price: "69.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
     { name: "Rivales Destinados Booster Box", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "215.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
-    { name: "Rivales Destinados Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "19.95 €", image: "./images/Sin imagen español.jpg", status: "AGOTADO"},
+    { name: "Rivales Destinados Blister", description: "<br>🟡 Cazadores de cartas caras <br>🔵 Coleccionistas.", languaje: "Español", price: "19.95 €", image: "./images/Sin imagen español.jpg", status: "RESERVA"},
 ];
 // Salto de línea --> <br>
 const icons = [
