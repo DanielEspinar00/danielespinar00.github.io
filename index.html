@@ -1,63 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+<html manifest="cache.manifest"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-
     <title>Ruta 151</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="./images/logo-tienda.PNG" type="image/PNG" />
+    <link rel="icon" href="./images/logo-tienda.png" type="image/png" />
 
-    <script>
-        async function getFileVersion(filePath) {
-            try {
-                const response = await fetch(filePath, { method: 'HEAD' });
-                const lastModified = response.headers.get('Last-Modified');
-                return lastModified ? new Date(lastModified).getTime() : new Date().getTime();
-            } catch (error) {
-                console.error(`Error obteniendo la versión de ${filePath}:`, error);
-                return new Date().getTime();
-            }
-        }
+    <link rel="stylesheet" href="./style.css" />
 
-        async function loadFiles() {
-            const styleVersion = await getFileVersion('./style.css');
-            const scriptVersion = await getFileVersion('./script.js');
-
-            // Insertar archivos en el head con el parámetro de versión
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = `./style.css?v=${styleVersion}`;
-            document.head.appendChild(link);
-
-            const script = document.createElement('script');
-            script.src = `./script.js?v=${scriptVersion}`;
-            document.body.appendChild(script);
-        }
-
-        async function loadImages() {
-            const images = document.querySelectorAll('img');
-            for (let img of images) {
-                const imgSrc = img.getAttribute('src');
-                if (imgSrc && imgSrc.startsWith('images/')) {
-                    const imgVersion = await getFileVersion(imgSrc);
-                    img.src = `${imgSrc}?v=${imgVersion}`;
-                }
-            }
-        }
-
-        loadFiles();
-        loadImages();
-    </script>
+    <script type="text/javascript" src="update_cache.js"></script>
 </head>
 <body>
-    
+    <body onload="checkForUpdate()"></body>
     <div class="header">
-        <img src="./images/logo-tienda.PNG" alt="Ruta 151 Logo">
+        <img src="./images/logo-tienda.png" alt="Ruta 151 Logo">
     </div>
 
     <div id="icon-list1" class="icon-list"></div>
@@ -71,5 +33,6 @@
         <div id="icon-list2" class="icon-list"></div>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>
