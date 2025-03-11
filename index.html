@@ -28,14 +28,16 @@
             const styleVersion = await getFileVersion('./style.css');
             const scriptVersion = await getFileVersion('./script.js');
 
-            // Insertar archivos en el head con el parámetro de versión
+            // Cargar CSS
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = `./style.css?v=${styleVersion}`;
             document.head.appendChild(link);
 
+            // Cargar JS con defer para asegurarse de que se ejecuta después de parsear el DOM
             const script = document.createElement('script');
             script.src = `./script.js?v=${scriptVersion}`;
+            script.defer = true; // 👈 Esto hace que espere a que el DOM esté listo
             document.body.appendChild(script);
         }
 
@@ -50,8 +52,8 @@
             }
         }
 
-        loadFiles();
         loadImages();
+        loadFiles();
     </script>
 </head>
 <body>
@@ -71,5 +73,6 @@
         <div id="icon-list2" class="icon-list"></div>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>
