@@ -90,13 +90,6 @@ body {
     font-weight: bold;
 }
 
-.product-description {
-    text-align: justify;
-    text-justify: inter-word; /* Asegura que las palabras se distribuyan uniformemente */
-    margin-bottom: 10px; /* Espacio entre las líneas de la descripción */
-}
-
-
 .contact-panel {
     background-color: #f8f7f4; /* Fondo suave */
     padding: 20px;

@@ -16,25 +16,41 @@ const icons = [
 
 // A partir de aqui no tocar
 
-document.addEventListener("DOMContentLoaded", () => {
-    const iconList = document.getElementById("icon-list1");
-    icons.forEach(({link, icon}) => {
-        const a = document.createElement("a");
-        a.href = link;
-        a.target = "_blank";
+// document.addEventListener("DOMContentLoaded", () => {
+//     const iconList = document.getElementById("icon-list1");
+//     icons.forEach(({link, icon}) => {
+//         const a = document.createElement("a");
+//         a.href = link;
+//         a.target = "_blank";
         
-        const img = document.createElement("img");
-        img.src = icon;
-        img.alt = "Social Icon";
-        img.classList.add("social-icon");
+//         const img = document.createElement("img");
+//         img.src = icon;
+//         img.alt = "Social Icon";
+//         img.classList.add("social-icon");
         
-        a.appendChild(img);
-        iconList.appendChild(a);
-    });
-});
+//         a.appendChild(img);
+//         iconList.appendChild(a);
+//     });
+// });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const iconList = document.getElementById("icon-list2");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const iconList = document.getElementById("icon-list2");
+//     icons.forEach(({link, icon}) => {
+//         const a = document.createElement("a");
+//         a.href = link;
+//         a.target = "_blank";
+        
+//         const img = document.createElement("img");
+//         img.src = icon;
+//         img.alt = "Social Icon";
+//         img.classList.add("social-icon");
+        
+//         a.appendChild(img);
+//         iconList.appendChild(a);
+//     });
+// });
+
+const iconList1 = document.getElementById("icon-list1");
     icons.forEach(({link, icon}) => {
         const a = document.createElement("a");
         a.href = link;
@@ -46,9 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
         img.classList.add("social-icon");
         
         a.appendChild(img);
-        iconList.appendChild(a);
+        iconList1.appendChild(a);
     });
-});
+
+const iconList2 = document.getElementById("icon-list2");
+    icons.forEach(({link, icon}) => {
+        const a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        
+        const img = document.createElement("img");
+        img.src = icon;
+        img.alt = "Social Icon";
+        img.classList.add("social-icon");
+        
+        a.appendChild(img);
+        iconList2.appendChild(a);
+    });
 
 
 // Función para ordenar productos por su estado
