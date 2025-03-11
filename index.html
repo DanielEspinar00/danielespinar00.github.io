@@ -1,187 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="fullname"></title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo fullname"></div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="phone-nav">
-      <div class="logo fullname"></div>
-      <div class="phone-menu">
-        <div class="phone-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title fullname"></h1>
-        <p class="section__text__p2 charge"></p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/cv.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon linkedinClick"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon githubClick"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />IoT System Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelor's Degree in Computer Engineering (UCLM)<br />Master's Degree in Computer Engineering (UCLM)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p class="about_text">
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div  class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Development</h2>
-            <div id="experience-container" class="article-container">
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div id="projects-container" class="about-containers">
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container emailClick">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a class="email"></a></p>
-        </div>
-        <div class="contact-info-container linkedinClick">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a>LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p class="copyright"></p>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Ruta 151</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logo-tienda.png" type="image/png" />
+
+    <script>
+        async function getFileVersion(filePath) {
+            try {
+                const response = await fetch(filePath, { method: 'HEAD' });
+                const lastModified = response.headers.get('Last-Modified');
+                return lastModified ? new Date(lastModified).getTime() : new Date().getTime();
+            } catch (error) {
+                console.error(`Error obteniendo la versión de ${filePath}:`, error);
+                return new Date().getTime();
+            }
+        }
+
+        async function loadFiles() {
+            const styleVersion = await getFileVersion('./style.css');
+            const scriptVersion = await getFileVersion('./script.js');
+
+            // Insertar archivos en el head con el parámetro de versión
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = `./style.css?v=${styleVersion}`;
+            document.head.appendChild(link);
+
+            const script = document.createElement('script');
+            script.src = `./script.js?v=${scriptVersion}`;
+            document.body.appendChild(script);
+        }
+
+        async function loadImage() {
+            const imgVersion = await getFileVersion('./images/logo-tienda.png');
+            document.querySelector('.header img').src = `./images/logo-tienda.png?v=${imgVersion}`;
+        }
+
+        loadFiles();
+        loadImage();
+    </script>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="./images/logo-tienda.png" alt="Ruta 151 Logo">
+    </div>
+
+    <div id="icon-list1" class="icon-list"></div>
+    
+    <h2 id="h-lista-productos">Lista de Productos</h2>
+    <div class="product-container" id="product-list"></div>
+    
+    <!-- Panel de contacto -->
+    <div class="contact-panel">
+        <h3>Reservas e información</h3>
+        <div id="icon-list2" class="icon-list"></div>
+    </div>
+</body>
 </html>
